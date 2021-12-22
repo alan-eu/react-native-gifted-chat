@@ -143,6 +143,7 @@ export interface BubbleProps<TMessage extends IMessage> {
   containerStyle?: LeftRightStyle<ViewStyle>
   wrapperStyle?: LeftRightStyle<ViewStyle>
   textStyle?: LeftRightStyle<TextStyle>
+  linkStyle?: LeftRightStyle<TextStyle>
   bottomContainerStyle?: LeftRightStyle<ViewStyle>
   tickStyle?: StyleProp<TextStyle>
   containerToNextStyle?: LeftRightStyle<ViewStyle>
@@ -196,6 +197,7 @@ export default class Bubble<
     previousMessage: {},
     containerStyle: {},
     wrapperStyle: {},
+    linkStyle: {},
     bottomContainerStyle: {},
     tickStyle: {},
     usernameStyle: {},
