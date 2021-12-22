@@ -9,6 +9,7 @@ import {
   StyleProp,
   ViewStyle,
   TextStyle,
+  TextProps,
 } from 'react-native'
 
 import QuickReplies from './QuickReplies'
@@ -144,6 +145,7 @@ export interface BubbleProps<TMessage extends IMessage> {
   wrapperStyle?: LeftRightStyle<ViewStyle>
   textStyle?: LeftRightStyle<TextStyle>
   linkStyle?: LeftRightStyle<TextStyle>
+  textProps?: TextProps
   bottomContainerStyle?: LeftRightStyle<ViewStyle>
   tickStyle?: StyleProp<TextStyle>
   containerToNextStyle?: LeftRightStyle<ViewStyle>
@@ -198,6 +200,7 @@ export default class Bubble<
     containerStyle: {},
     wrapperStyle: {},
     linkStyle: {},
+    textProps: {},
     bottomContainerStyle: {},
     tickStyle: {},
     usernameStyle: {},
