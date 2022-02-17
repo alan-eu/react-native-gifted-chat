@@ -468,6 +468,12 @@ class GiftedChat<TMessage extends IMessage = IMessage> extends React.Component<
     if (text !== prevProps.text) {
       this.setTextFromProp(text)
     }
+    if (
+      (prevProps.renderAccessory && !this.props.renderAccessory) ||
+      (!prevProps.renderAccessory && this.props.renderAccessory)
+    ) {
+      this.resetInputToolbar(false)
+    }
   }
 
   initLocale() {
@@ -747,8 +753,8 @@ class GiftedChat<TMessage extends IMessage = IMessage> extends React.Component<
     }
   }
 
-  resetInputToolbar() {
-    if (this.textInput) {
+  resetInputToolbar(clearInput: boolean = true) {
+    if (clearInput && this.textInput) {
       this.textInput.clear()
     }
     this.notifyInputTextReset()
